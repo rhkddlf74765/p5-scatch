@@ -1,4 +1,4 @@
-var audio = new Audio();
+var song;
 var Width=3;
 var Height=20;
 var change;
@@ -7,6 +7,10 @@ var size=200;
 var lo_Yarray = new Array(size);
 var lo_Xarray = new Array(size);
 var v_array=new Array(size);
+
+function preload(){
+  song=loadSound("rain-01.mp3");
+}
 function setup() {
   createCanvas(700, 500);
   loca_x=100;
@@ -14,6 +18,7 @@ function setup() {
   change=-1;
   vy=5;
   makeranarr();
+  song.play();
 }
 
 function draw() {
